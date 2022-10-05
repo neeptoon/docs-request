@@ -1,0 +1,2 @@
+*{box-sizing:border-box}body{font-size:1.2rem;margin:0}h1{text-align:center}form{display:flex;flex-direction:column;gap:3px;margin:2rem auto;width:500px}form label{font-size:13px}form input,form select{padding:.5rem 1rem}input[type=text],select{width:100%}form div{font-size:8px;height:15px}form p{color:red;margin:0}form>button{background-color:#ba55d3;border:none;color:#fff;cursor:pointer;padding:.5rem .8rem}form>button:hover{background-color:violet}
+/*# sourceMappingURL=main.71ffe3e7.css.map*/
