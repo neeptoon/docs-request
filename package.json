@@ -2,6 +2,7 @@
     "name": "test_soft",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://neeptoon.github.io/test",
     "dependencies": {
         "@emotion/react": "^11.10.4",
         "@emotion/styled": "^11.10.4",
@@ -19,12 +20,14 @@
         "web-vitals": "^2.1.0"
     },
     "scripts": {
-        "dev": "concurrently \"yarn server\" \"yarn start\"",
+        "dev": "concurrently \"npm run server\" \"npm run start\"",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "server": "json-server -w server/db.json -p 3001"
+        "server": "json-server -w server/db.json -p 3001",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -43,5 +46,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
     }
 }
