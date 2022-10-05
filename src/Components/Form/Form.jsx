@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./Form.module.css";
 import {useState, useEffect} from "react";
-import {getWorkers} from "../../api";
-import {useForm} from "react-hook-form"
+import {getWorkers, sendOrder} from "../../api";
+import {useForm} from "react-hook-form";
+
 
 const Form = () => {
 
@@ -20,6 +21,7 @@ const Form = () => {
 
     const onSubmit = (data) => {
         alert(JSON.stringify(data));
+        sendOrder(data)
         reset();
     }
 
@@ -36,7 +38,7 @@ const Form = () => {
         <>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                 <label>
-                    Документ
+                    Наименование документа
                     <input
                     type="text"
                     {...register('doc', {
@@ -46,14 +48,14 @@ const Form = () => {
                 </label>
                 <div>{errors?.doc && <p>Введи название документа</p>}</div>
                 <label>
-                    Работник
+                    ФИО Конструктора
                     <select
-                    {...register('worker', {
+                    {...register('workerID', {
                         required: true
                     })}
                 >
                     <option></option>
-                    {workers.map(worker => <option key={worker.id} value={worker.name}>{worker.name}</option>)}
+                    {workers.map(worker => <option key={worker.id} value={worker.id}>{worker.name}</option>)}
                 </select>
                 </label>
                 <div>{errors?.worker && <p>Выбери работника</p>}</div>
