@@ -2,7 +2,7 @@
     "name": "test_soft",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://neeptoon.github.io/test",
+    "homepage": "https://neeptoon.github.io/docs-request",
     "dependencies": {
         "@emotion/react": "^11.10.4",
         "@emotion/styled": "^11.10.4",
