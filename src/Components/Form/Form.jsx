@@ -20,7 +20,6 @@ const Form = () => {
     });
 
     const onSubmit = (data) => {
-        alert(JSON.stringify(data));
         sendOrder(data)
         reset();
     }

@@ -1,12 +1,11 @@
 import "./style/App.css";
-import Form from "./Components/Form/Form";
-
+import LabTabs from "./Components/LabTabs/LabTabs";
 
 function App() {
   return (
     <div className="App">
         <h1>Тестовое</h1>
-        <Form/>
+        <LabTabs/>
     </div>
   );
 }
